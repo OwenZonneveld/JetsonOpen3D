@@ -851,6 +851,7 @@ if(USE_SYSTEM_CURL)
         SEARCH_ARGS libcurl
     )
     if(NOT 3rdparty_curl_FOUND)
+	    message(ERROR "COULD NOT FIND SYSTEM CURL") # Jetson needs to use System curl
         set(USE_SYSTEM_CURL OFF)
     endif()
 endif()
