@@ -41,12 +41,12 @@ endif()
 include(CMakeDependentOption)
 
 # Open3D build options
-option(BUILD_SHARED_LIBS          "Build shared libraries"                   OFF)
-option(BUILD_EXAMPLES             "Build Open3D examples programs"           ON )
+option(BUILD_SHARED_LIBS          "Build shared libraries"                   ON )
+option(BUILD_EXAMPLES             "Build Open3D examples programs"           OFF )
 option(BUILD_UNIT_TESTS           "Build Open3D unit tests"                  OFF)
 option(BUILD_BENCHMARKS           "Build the micro benchmarks"               OFF)
 option(BUILD_PYTHON_MODULE        "Build the python module"                  ON )
-option(BUILD_CUDA_MODULE          "Build the CUDA module"                    OFF)
+option(BUILD_CUDA_MODULE          "Build the CUDA module"                    ON)
 option(BUILD_COMMON_CUDA_ARCHS    "Build for common CUDA GPUs (for release)" OFF)
 if (WIN32)   # Causes CUDA runtime error on Windows (See issue #6555)
     option(ENABLE_CACHED_CUDA_MANAGER "Enable cached CUDA memory manager"    OFF)
@@ -90,7 +90,7 @@ else()
     option(USE_SYSTEM_BLAS        "Use system pre-installed openblas"        ON )
 endif()
 option(USE_SYSTEM_ASSIMP          "Use system pre-installed assimp"          OFF)
-option(USE_SYSTEM_CURL            "Use system pre-installed curl"            OFF)
+option(USE_SYSTEM_CURL            "Use system pre-installed curl"            ON)
 option(USE_SYSTEM_CUTLASS         "Use system pre-installed cutlass"         OFF)
 option(USE_SYSTEM_EIGEN3          "Use system pre-installed eigen3"          OFF)
 option(USE_SYSTEM_EMBREE          "Use system pre-installed Embree"          OFF)
@@ -506,7 +506,7 @@ include(3rdparty/find_dependencies.cmake)
 add_subdirectory(cpp)
 
 # Examples
-add_subdirectory(examples)
+# add_subdirectory(examples)
 
 # Documentation
 add_subdirectory(docs)
