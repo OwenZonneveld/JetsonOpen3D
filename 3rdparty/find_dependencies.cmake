@@ -579,6 +579,7 @@ if(USE_SYSTEM_EIGEN3)
         TARGETS Eigen3::Eigen
     )
     if(NOT 3rdparty_eigen3_FOUND)
+	message(ERROR "CAN NOT FIND SYSTEM EIGEN")
         set(USE_SYSTEM_EIGEN3 OFF)
     endif()
 endif()
