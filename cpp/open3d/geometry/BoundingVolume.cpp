@@ -263,10 +263,12 @@ AxisAlignedBoundingBox::AxisAlignedBoundingBox(const Eigen::Vector3d& min_bound,
       max_bound_(max_bound),
       color_(1, 1, 1) {
     if ((max_bound_.array() < min_bound_.array()).any()) {
+	    /*
         open3d::utility::LogWarning(
                 "max_bound {} of bounding box is smaller than min_bound {} in "
                 "one or more axes. Fix input values to remove this warning.",
                 max_bound_, min_bound_);
+		*/
         max_bound_ = max_bound.cwiseMax(min_bound);
         min_bound_ = max_bound.cwiseMin(min_bound);
     }
