@@ -4,7 +4,7 @@ include(ExternalProject)
 ExternalProject_Add(
     ext_eigen
     PREFIX eigen
-    SOURCE_DIR "${OPEN3D_THIRD_PARTY_DOWNLOAD_DIR}/eigen"
+    SOURCE_DIR "${OPEN3D_THIRD_PARTY_DOWNLOAD_DIR}/eigen/eigen-src"
     UPDATE_COMMAND ""
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
