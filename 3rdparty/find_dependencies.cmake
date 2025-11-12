@@ -586,7 +586,7 @@ endif()
 
 if(NOT USE_SYSTEM_EIGEN3)
     
-    # include(${Open3D_3RDPARTY_DIR}/eigen/eigen.cmake)
+    include(${Open3D_3RDPARTY_DIR}/eigen/eigen.cmake)
     open3d_import_3rdparty_library(3rdparty_eigen3
         PUBLIC
         INCLUDE_DIRS ${EIGEN_INCLUDE_DIRS}
