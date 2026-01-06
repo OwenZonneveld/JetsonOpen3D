@@ -54,7 +54,7 @@ __global__ void l2SelectMin1(T* productDistances,
                              int dim) {
     // Each block handles kRowsPerBlock rows of the distances (results)
     Pair<T, int> threadMin[kRowsPerBlock];
-    __shared__ Pair<T, int> blockMin[kRowsPerBlock * (kBlockSize / kWarpSize)];
+    Pair<T, int> blockMin[kRowsPerBlock * (kBlockSize / kWarpSize)];
 
     T distance[kRowsPerBlock];
 
