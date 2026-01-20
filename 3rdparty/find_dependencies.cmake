@@ -1395,8 +1395,8 @@ if(BUILD_GUI)
             else()
                 message(FATAL_ERROR "Cannot find matching libc++ and libc++abi libraries with version >=7.")
             endif()
-            find_library(CPP_LIBRARY    c++    PATHS ${CLANG_LIBDIR} REQUIRED NO_DEFAULT_PATH)
-            find_library(CPPABI_LIBRARY c++abi PATHS ${CLANG_LIBDIR} REQUIRED NO_DEFAULT_PATH)
+            find_library(CPP_LIBRARY    c++    PATHS ${CLANG_LIBDIR} REQUIRED)
+            find_library(CPPABI_LIBRARY c++abi PATHS ${CLANG_LIBDIR} REQUIRED)
 
             # Ensure that libstdc++ gets linked first.
             target_link_libraries(3rdparty_filament INTERFACE -lstdc++
