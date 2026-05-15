@@ -36,8 +36,8 @@ if(BUILD_VTK_FROM_SOURCE)
     ExternalProject_Add(
         ext_vtk
         PREFIX vtk
-        URL https://www.vtk.org/files/release/${VTK_VERSION}/VTK-${VTK_VERSION}.0.tar.gz
-        URL_HASH SHA256=8fed42f4f8f1eb8083107b68eaa9ad71da07110161a3116ad807f43e5ca5ce96
+        # URL https://www.vtk.org/files/release/${VTK_VERSION}/VTK-${VTK_VERSION}.0.tar.gz OLD URL from VTK Source
+        URL https://github.com/OwenZonneveld/Jetson_VTK/archive/refs/tags/v9.1.0_no_logging.tar.gz
         DOWNLOAD_DIR "${OPEN3D_THIRD_PARTY_DOWNLOAD_DIR}/vtk"
         # do not update
         UPDATE_COMMAND ""
